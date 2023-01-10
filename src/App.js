@@ -1,7 +1,12 @@
 import styled, {keyframes} from "styled-components";
 
 const Father = styled.div`
-  // display: flex;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: ${(props) => props.theme.backgroundColor}
 `
 const Box = styled.div`
   background-color: ${(props) => props.bgColor};
@@ -42,7 +47,7 @@ const Emoji = styled.span`
 `
 
 const AniBox = styled.div`
-  height: 200px;
+  width: 200px;
   height: 200px;
   background-color: yellow;
   display: flex;
@@ -55,10 +60,27 @@ const AniBox = styled.div`
     }
   }
 `
+const BtnAnim = keyframes`
+from{
+  color:tomato;
+}
+  to{
+    color: teal;
+  }
+`
+const SampleBtn = styled.button`
+  animation: ${BtnAnim} 0.5s infinite;
+`
+
+// Theme
+const Title = styled.h1`
+  color: ${(props) => props.theme.textColor}
+`
 
 function App() {
   return (
     <Father>
+      <Title>Hello</Title>
       <Input />
       <Box bgColor="teal">
         <Text>Hello</Text>
@@ -71,6 +93,8 @@ function App() {
         <AniBox>
           <Emoji as="p">🏀</Emoji>
         </AniBox>
+
+        <SampleBtn>TestButton</SampleBtn>
     </Father>
 
   );
