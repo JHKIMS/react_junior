@@ -1,4 +1,6 @@
+import React from "react";
 import styled, {keyframes} from "styled-components";
+import TxBox from "./TxBox";
 
 const Father = styled.div`
   display: flex;
@@ -8,17 +10,19 @@ const Father = styled.div`
   align-items: center;
   background-color: ${(props) => props.theme.backgroundColor}
 `
-const Box = styled.div`
+
+/* const Box = styled.div`
   background-color: ${(props) => props.bgColor};
   width: 100px;
   height: 100px;
-`
+` */
 const Text = styled.span`
   color:white;
 `
-const Circle = styled(Box)`
+/* 
+  const Circle = styled(Box)`
   border-radius: 50px;
-`
+` */
 const Btn = styled.button`
   color: white;
   background-color: tomato;
@@ -77,16 +81,18 @@ const Title = styled.h1`
   color: ${(props) => props.theme.textColor}
 `
 
+
+
 function App() {
   return (
     <Father>
       <Title>Hello</Title>
       <Input />
-      <Box bgColor="teal">
+{/*       <Box bgColor="teal">
         <Text>Hello</Text>
       </Box>
       <Box bgColor="tomato" />
-      <Circle bgColor="dodgerblue"/>
+      <Circle bgColor="dodgerblue"/> */}
       <Btn>LOGIN</Btn>
       <Btn as="a">LINK LOGIN</Btn>
 
@@ -95,6 +101,7 @@ function App() {
         </AniBox>
 
         <SampleBtn>TestButton</SampleBtn>
+        <TxBox bgColor="dodgerblue"/>
     </Father>
 
   );
