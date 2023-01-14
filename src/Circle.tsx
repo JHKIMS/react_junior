@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useState } from "react";
 
 // interface는 object를 설명해주는 것이다.(Object가 어떤식으로 보일지 설명)
 interface ContainerProps{
@@ -22,6 +23,8 @@ interface CircleProps{
 
 function Circle({bgColor, borderColor, testText="Default testText Set"}: CircleProps){ // bgColor의 타입은 CircleProps의 Object이다. 
             // == (props: CircleProps) 
+    const [counter, setCounter] = useState(0);
+    const [value, setValue] = useState<number|string>(1); // value는 number도 가능하고, string도 가능하다.
     return (
         <Container bgColor={bgColor} borderColor={borderColor ?? "blue"}>
             {testText}
