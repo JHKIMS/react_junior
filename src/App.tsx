@@ -2,6 +2,14 @@ import { useState } from "react";
 import styled from "styled-components";
 import Circle from "../StudyHistory/Circle";
 
+interface DummyProps{
+  text: string;
+  otherThing?: boolean;
+}
+function Dummy({text, otherThing = false}:DummyProps){
+  return <h1>{text}</h1>
+}
+
 function App() {
   const [value, setValue] = useState("");
   const onChange = (event: React.FormEvent<HTMLInputElement>) => {
@@ -36,6 +44,7 @@ function App() {
 
       <ThemeTs>
         <Ts>Protected</Ts>
+        <Dummy text="hello i'm dummy"></Dummy>
       </ThemeTs>
     </div>
   );
