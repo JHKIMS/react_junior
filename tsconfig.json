@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "StudyHistory/TxBox.tsx", "StudyHistory/TxBox.tsx", "StudyHistory/Circle.tsx", "StudyHistory/Circle.tsx"  ]
+, "StudyHistory/StyledComponent/TxBox.tsxponeStudyHistory/StyledComponent/TxBox.tsxistory/StyledComponent/TxBox.tsx", "StudyHistory/Circle/Circle.tsxcle.StudyHistory/Circle/Circle.tsxcle/Circle.tsx"  ]
 }

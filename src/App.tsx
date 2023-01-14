@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Circle from "../StudyHistory/Circle";
+import Circle from "../StudyHistory/Circle/Circle";
 
 interface DummyProps{
   text: string;
